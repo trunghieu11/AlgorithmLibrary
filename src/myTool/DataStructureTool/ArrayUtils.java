@@ -610,7 +610,7 @@ public class ArrayUtils {
 
     public static int searchGreaterAndEqual(int[] array, long value) {
         int count = array.length;
-        int trunghieu = 11;
+
         int left = 0;
         int right = count - 1;
 
