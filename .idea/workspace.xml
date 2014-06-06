@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77f2df60-62d4-4305-b4f8-cb26338f556c" name="Default" comment="Hieu add&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHelperReport.txt" afterPath="$PROJECT_DIR$/CHelperReport.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chelper.properties" afterPath="$PROJECT_DIR$/chelper.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithm.iws" />
@@ -83,19 +86,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ArrayUtils.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/myTool/DataStructureTool/ArrayUtils.java">
+      <file leaf-file-name="TaskA.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/TaskA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="625" column="24" selection-start="17648" selection-end="17648" vertical-scroll-proportion="1.0563086" vertical-offset="15754" max-vertical-offset="17685">
+            <state line="14" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntervalTree.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/myTool/DataStructureTool/IntervalTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="39" selection-start="612" selection-end="612" vertical-scroll-proportion="0.6438792" vertical-offset="243" max-vertical-offset="2484">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Counter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/myTool/DataStructureTool/Counter.java">
+      <file leaf-file-name="LongIntervalTree.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/myTool/DataStructureTool/LongIntervalTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="10" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="972">
+            <state line="74" column="96" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2457">
               <folding />
             </state>
           </provider>
@@ -121,11 +135,13 @@
         <option value="$PROJECT_DIR$/src/myTool/DataStructureTool/person.java" />
         <option value="$PROJECT_DIR$/src/myTool/DataStructureTool/IntegerUtils.java" />
         <option value="$PROJECT_DIR$/src/main/TaskTam.java" />
-        <option value="$PROJECT_DIR$/src/main/TaskA.java" />
         <option value="$PROJECT_DIR$/src/main/TaskB.java" />
         <option value="$PROJECT_DIR$/src/main/TaskC.java" />
         <option value="$PROJECT_DIR$/src/main/TaskD.java" />
         <option value="$PROJECT_DIR$/src/myTool/DataStructureTool/ArrayUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/TaskA.java" />
+        <option value="$PROJECT_DIR$/src/myTool/DataStructureTool/IntervalTree.java" />
+        <option value="$PROJECT_DIR$/src/myTool/DataStructureTool/LongIntervalTree.java" />
       </list>
     </option>
   </component>
@@ -163,6 +179,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -238,7 +255,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,7 +265,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="vcs.Subversion" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -261,8 +277,24 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="dynamic.classpath" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="210" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="243" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="244" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1151" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="222" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="239" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="240" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1147" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Task.A - Mafia">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -478,7 +510,15 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="false" name="A - Mafia" type="Task" factoryName="Task">
+      <taskConf>src/main/A - Mafia.task</taskConf>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Task.A - Mafia" />
+    </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -552,6 +592,7 @@
       <workItem from="1401871014387" duration="7000" />
       <workItem from="1401932492540" duration="11145000" />
       <workItem from="1401956244084" duration="825000" />
+      <workItem from="1402019748269" duration="2826000" />
     </task>
     <task id="LOCAL-00001" summary="Hieu add">
       <created>1401956457563</created>
@@ -565,11 +606,19 @@
       <created>1401957865650</created>
       <updated>1401957865650</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Hieu add&#10;">
+      <created>1402027598631</created>
+      <updated>1402027598631</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Hieu add&#10;">
+      <created>1402028078236</created>
+      <updated>1402028078236</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180495000" />
+    <option name="totallyTimeSpent" value="187726000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -593,7 +642,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1170" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -607,7 +656,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -615,7 +664,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17571884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26783812" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2736954" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -681,6 +730,15 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/TaskA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="50" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="297" max-vertical-offset="459">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/myTool/DataStructureTool/ArrayUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="586" column="5" selection-start="16710" selection-end="16710" vertical-scroll-proportion="0.0" vertical-offset="15822" max-vertical-offset="17685">
@@ -785,11 +843,6 @@
         <state line="19" column="33" selection-start="586" selection-end="586" vertical-scroll-proportion="0.4733728" vertical-offset="0" max-vertical-offset="2975" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/myTool/DataStructureTool/LongIntervalTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="30" selection-start="2998" selection-end="2998" vertical-scroll-proportion="0.54927886" vertical-offset="1593" max-vertical-offset="2425" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/io/PrintWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="722" column="16" selection-start="23746" selection-end="23746" vertical-scroll-proportion="1.0554217" vertical-offset="16474" max-vertical-offset="26100" />
@@ -817,7 +870,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/myTool/DataStructureTool/Counter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="10" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
+        <state line="13" column="10" selection-start="312" selection-end="312" vertical-scroll-proportion="0.3611111" vertical-offset="0" max-vertical-offset="972">
           <folding />
         </state>
       </provider>
@@ -825,6 +878,29 @@
     <entry file="file://$PROJECT_DIR$/src/myTool/DataStructureTool/ArrayUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="625" column="24" selection-start="17648" selection-end="17648" vertical-scroll-proportion="1.0563086" vertical-offset="15754" max-vertical-offset="17685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/TaskA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myTool/DataStructureTool/LongIntervalTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="96" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2457">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myTool/DataStructureTool/IntervalTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="39" selection-start="612" selection-end="612" vertical-scroll-proportion="0.6438792" vertical-offset="243" max-vertical-offset="2484">
           <folding />
         </state>
       </provider>

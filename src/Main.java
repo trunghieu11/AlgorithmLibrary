@@ -32,72 +32,17 @@ public class Main {
 		OutputStream outputStream = System.out;
 		InputReader in = new InputReader(inputStream);
 		OutputWriter out = new OutputWriter(outputStream);
-		TaskD solver = new TaskD();
+		TaskA solver = new TaskA();
 		solver.solve(1, in, out);
 		out.close();
 	}
 }
 
-class TaskD {
+class TaskA {
     public void solve(int testNumber, InputReader in, OutputWriter out) {
-        int firstCount = in.readInt();
-        int secondCount = in.readInt();
-        int[] A = IOUtils.readIntArray(in, firstCount);
-        int[] B =IOUtils.readIntArray(in, secondCount);
-
-        ArrayUtils.safeSort(A);
-        ArrayUtils.safeSort(B);
-
-        long[] sumA = ArrayUtils.partialSums(A);
-        long[] sumB = ArrayUtils.partialSums(B);
-
-        int diff = B[secondCount - 1] - A[0];
-
-        if (diff <= 0) {
-            out.printLine(0);
-            return;
-        }
-
-        long left = 0;
-        long right = diff;
-        boolean isLeft = true;
-
-        while (right - left > 2) {
-            long midLeft = (left * 2 + right) / 3;
-            long midRight = (left + right * 2) / 3;
-            long answerLeft = calc(midLeft, firstCount, secondCount, A, B, sumA, sumB, diff);
-            long answerRight = calc(midRight, firstCount, secondCount, A, B, sumA, sumB, diff);
-
-            if (answerLeft < answerRight)
-                right = midRight;
-            else
-                left = midLeft;
-        }
-
-        long answer = Long.MAX_VALUE;
-
-        for (long i = left; i < left + 5; i++)
-            answer = Math.min(answer, calc(i, firstCount, secondCount, A, B, sumA, sumB, diff));
-
-        out.printLine(answer);
-    }
-
-    private long calc(long val, int firstCount, int secondCount, int[] A, int[] B, long[] sumA, long[] sumB, int diff) {
-        int idx = 0;
-
-        long cur = B[secondCount - 1] - val;
-
-        idx = ArrayUtils.searchGreaterAndEqual(B, cur);
-
-        long answerB = sumB[secondCount] - sumB[idx] - 1L * (secondCount - idx) * cur;
-
-        cur = A[0] + (diff - val);
-
-        idx = ArrayUtils.searchLowerAndEqual(A, cur);
-
-        long answerA = 1L * (idx + 1) * cur - sumA[idx + 1];
-
-        return answerA + answerB;
+        int count = in.readInt();
+        int[] A = IOUtils.readIntArray(in, count);
+        out.printLine(ArrayUtils.maxElement(A) + 1);
     }
 }
 
@@ -206,90 +151,18 @@ class ArrayUtils {
     /*Them boi Nguyen Trung Hieu*/
 
 
-    public static void safeSort(int[] array) {
-        Collections.shuffle(asList(array));
-        Arrays.sort(array);
-    }
-
-    private static List<Integer> asList(int[] array) {
-        return new IntList(array);
-    }
-
-    private static class IntList extends AbstractList<Integer> implements RandomAccess {
-
-        int[] array;
-
-        private IntList(int[] array) {
-            this.array = array;
-        }
-
-        public Integer get(int index) {
-            return array[index];
-        }
-
-        public Integer set(int index, Integer element) {
-            int result = array[index];
-            array[index] = element;
-            return result;
-        }
-
-        public int size() {
-            return array.length;
-        }
-    }
-
-    public static long[] partialSums(int[] array) {
-        long[] result = new long[array.length + 1];
-        for (int i = 0; i < array.length; i++)
-            result[i + 1] = result[i] + array[i];
-        return result;
-    }
-
     //update 24/8/2013
 
 
-    public static int searchLowerAndEqual(int[] array, long value) {
-        int count = array.length;
-
-        int left = 0;
-        int right = count - 1;
-
-        while (right - left > 1) {
-            int mid = (right + left) >> 1;
-            if (value < array[mid])
-                right = mid;
-            else
-                left = mid;
-        }
-
-        if (array[right] <= value)
-            return right;
-        else if (array[left] <= value)
-            return left;
-        else
-            return -1;
+    public static int maxElement(int[] array) {
+        return maxElement(array, 0, array.length);
     }
 
-    public static int searchGreaterAndEqual(int[] array, long value) {
-        int count = array.length;
-
-        int left = 0;
-        int right = count - 1;
-
-        while (right - left > 1) {
-            int mid = (right + left) >> 1;
-            if (value <= array[mid])
-                right = mid;
-            else
-                left = mid;
-        }
-
-        if (array[left] >= value)
-            return left;
-        else if (array[right] >= value)
-            return right;
-        else
-            return -1;
+    public static int maxElement(int[] array, int from, int to) {
+        int result = Integer.MIN_VALUE;
+        for (int i = from; i < to; i++)
+            result = Math.max(result, array[i]);
+        return result;
     }
 
 }
