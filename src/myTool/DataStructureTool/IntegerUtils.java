@@ -248,6 +248,19 @@ public class IntegerUtils {
         return a;
     }
 
+    BigInteger gcd(BigInteger a, BigInteger b) {
+        a = a.abs();
+        b = b.abs();
+        BigInteger zero = new BigInteger("0");
+        while (b.compareTo(zero) != 0) {
+            BigInteger temp = a.mod(b);
+            a = b;
+            b = temp;
+        }
+
+        return a;
+    }
+
     public static long[][] generateBinomialCoefficients(int n) {
         long[][] result = new long[n + 1][n + 1];
         for (int i = 0; i <= n; i++) {
