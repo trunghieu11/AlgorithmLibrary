@@ -7,7 +7,7 @@ package myTool.DataStructureTool;
  * Time: 1:08 PM
  * To change this template use File | Settings | File Templates.
  */
-abstract class LongIntervalTree extends IntervalTree {
+public abstract class LongIntervalTree extends IntervalTree {
     protected long[] value;
     protected long[] delta;
 
