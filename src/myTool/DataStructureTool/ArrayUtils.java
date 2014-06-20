@@ -130,8 +130,8 @@ public class ArrayUtils {
 
     public static long sumArray(int[] array, int from, int to) {
         long result = 0;
-        to = Math.min(to, array.length);
-        for (int i = 0; i < to; i++)
+        to = Math.min(to, array.length - 1);
+        for (int i = from; i <= to; i++)
             result += array[i];
         return result;
     }
@@ -145,8 +145,8 @@ public class ArrayUtils {
 
     public static long sumArray(long[] array, int from, int to) {
         long result = 0;
-        to = Math.min(to, array.length);
-        for (int i = 0; i < to; i++)
+        to = Math.min(to, array.length - 1);
+        for (int i = from; i <= to; i++)
             result += array[i];
         return result;
     }

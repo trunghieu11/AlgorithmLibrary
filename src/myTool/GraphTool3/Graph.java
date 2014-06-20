@@ -105,6 +105,10 @@ public class Graph {
         return addFlowWeightedEdge(from, to, weight, 0);
     }
 
+    public final int edgeCount() {
+        return edgeCount;
+    }
+
     public final int addSimpleEdge(int from, int to) {
         return addWeightedEdge(from, to, 0);
     }
