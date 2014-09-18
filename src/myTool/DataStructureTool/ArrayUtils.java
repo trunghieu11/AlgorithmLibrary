@@ -246,6 +246,14 @@ public class ArrayUtils {
         return new IntList(array);
     }
 
+    public static long sumColumn(int[][] array, int x) {
+        long answer = 0;
+        for (int i = 0; i < array.length; i++) {
+            answer += array[i][x];
+        }
+        return answer;
+    }
+
     private static class IntList extends AbstractList<Integer> implements RandomAccess {
 
         int[] array;
