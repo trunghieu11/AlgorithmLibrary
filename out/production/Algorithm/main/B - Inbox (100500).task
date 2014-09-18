@@ -1,0 +1,42 @@
+18 B - Inbox (100500)
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+3
+0
+12 5
+0 1 0 1 0
+
+2 3
+
+1
+1
+12 5
+1 1 0 0 1
+
+2 4
+
+1
+2
+6 2
+0 0
+
+2 0
+
+1
+8 src/main
+8 -Xmx256M
+4 Main
+10 main.TaskB
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2014.09.17
+30 Codeforces Round #265 (Div. 2)
+1
+25 myTool.IOTool.InputReader
+26 myTool.IOTool.OutputWriter
+0
+0
