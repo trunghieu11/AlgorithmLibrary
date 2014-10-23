@@ -1,12 +1,16 @@
-import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.BufferedWriter;
-import java.util.InputMismatchException;
 import java.util.Comparator;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.NoSuchElementException;
 import java.io.Writer;
+import java.util.Collection;
+import java.util.List;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.InputMismatchException;
+import java.util.ArrayList;
+import java.util.NoSuchElementException;
 import java.math.BigInteger;
 import java.io.InputStream;
 
@@ -21,29 +25,23 @@ public class Main {
 		OutputStream outputStream = System.out;
 		InputReader in = new InputReader(inputStream);
 		OutputWriter out = new OutputWriter(outputStream);
-		TaskB solver = new TaskB();
-		solver.solve(1, in, out);
+		TaskTam solver = new TaskTam();
+		int testCount = Integer.parseInt(in.next());
+		for (int i = 1; i <= testCount; i++)
+			solver.solve(i, in, out);
 		out.close();
 	}
 }
 
-class TaskB {
+class TaskTam {
     public void solve(int testNumber, InputReader in, OutputWriter out) {
         int count = in.readInt();
-        int[] A = IOUtils.readIntArray(in, count);
+        List<Long> divisors = IntegerUtils.getDivisors(count);
 
-        int answer = 0;
-        for (int i = 0; i < count; i++) {
-            if (A[i] == 1) {
-                if (i - 1 >= 0 && A[i - 1] == 0)
-                    answer += 2;
-                else
-                    answer += 1;
-            }
-        }
+        long answer = 0;
+        for (long x : divisors)
+            answer += x;
 
-        if (A[0] == 0)
-            answer = Math.max(answer - 1, 0);
         out.printLine(answer);
     }
 }
@@ -101,10 +99,25 @@ class InputReader {
         return c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == -1;
     }
 
+    public String readString() {
+        int c = read();
+        while (isSpaceChar(c))
+            c = read();
+        StringBuffer res = new StringBuffer();
+        do {
+            res.appendCodePoint(c);
+            c = read();
+        } while (!isSpaceChar(c));
+        return res.toString();
+    }
+
     public interface SpaceCharFilter {
         public boolean isSpaceChar(int ch);
     }
 
+    public String next() {
+        return readString();
+    }
 }
 
 class OutputWriter {
@@ -137,14 +150,86 @@ class OutputWriter {
 
 }
 
-class IOUtils {
+class IntegerUtils {
 
-    public static int[] readIntArray(InputReader in, int size) {
-        int[] array = new int[size];
-        for (int i = 0; i < size; i++)
-            array[i] = in.readInt();
-        return array;
+    public static List<Pair<Long, Integer>> factorize(long number) {
+        List<Pair<Long, Integer>> result = new ArrayList<Pair<Long, Integer>>();
+        for (long i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                int power = 0;
+                do {
+                    power++;
+                    number /= i;
+                } while (number % i == 0);
+                result.add(Pair.makePair(i, power));
+            }
+        }
+        if (number != 1)
+            result.add(Pair.makePair(number, 1));
+        return result;
     }
 
+    public static List<Long> getDivisors(long number) {
+        List<Pair<Long, Integer>> primeDivisors = factorize(number);
+        return getDivisorsImpl(primeDivisors, 0, 1, new ArrayList<Long>());
+    }
+
+    private static List<Long> getDivisorsImpl(List<Pair<Long, Integer>> primeDivisors, int index, long current, List<Long> result)
+    {
+        if (index == primeDivisors.size()) {
+            result.add(current);
+            return result;
+        }
+        long p = primeDivisors.get(index).first;
+        int power = primeDivisors.get(index).second;
+        for (int i = 0; i <= power; i++) {
+            getDivisorsImpl(primeDivisors, index + 1, current, result);
+            current *= p;
+        }
+        return result;
+    }
+
+}
+
+class Pair<U, V> implements Comparable<Pair<U, V>> {
+
+    public final U first;
+    public final V second;
+
+    public static<U, V> Pair<U, V> makePair(U first, V second) {
+        return new Pair<U, V>(first, second);
+    }
+
+    public Pair(U first, V second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Pair pair = (Pair) o;
+
+        return !(first != null ? !first.equals(pair.first) : pair.first != null) && !(second != null ? !second.equals(pair.second) : pair.second != null);
+
+    }
+
+    public int hashCode() {
+        int result = first != null ? first.hashCode() : 0;
+        result = 31 * result + (second != null ? second.hashCode() : 0);
+        return result;
+    }
+
+    public String toString() {
+        return "(" + first + "," + second + ")";
+    }
+
+    public int compareTo(Pair<U, V> o) {
+        int value = ((Comparable<U>)first).compareTo(o.first);
+        if (value != 0)
+            return value;
+        return ((Comparable<V>)second).compareTo(o.second);
+    }
 }
 
