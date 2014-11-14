@@ -1,14 +1,38 @@
 package %package%;
 
+import myTool.IOTool.OutputWriter;
 import net.egork.chelper.task.Test;
 import net.egork.chelper.tester.TestCase;
 
-import java.util.Collection;
-import java.util.Collections;
+import java.io.StringWriter;
+import java.util.*;
 
-public class %TestCaseClass% {
+public class TaskTamTestCase {
     @TestCase
-    public Collection<Test> createTests() {
-        return Collections.emptyList();
+    public Collection<Test> loadTests() {
+        List<Test> tests = new ArrayList<Test>();
+        Random random = new Random(239);
+        int testCount = 0;
+        for (int testNumber = 0; testNumber < testCount; testNumber++) {
+            StringWriter sw = new StringWriter();
+            OutputWriter out = new OutputWriter(sw);
+            tests.add(new Test(sw.toString()));
+        }
+        return tests;
+    }
+
+    @TestCase
+    public Collection<Test> accuracyTests() {
+        List<Test> tests = new ArrayList<Test>();
+        Random random = new Random(239);
+        int testCount = 0;
+        for (int testNumber = 0; testNumber < testCount; testNumber++) {
+            StringWriter sw = new StringWriter();
+            OutputWriter out = new OutputWriter(sw);
+            StringWriter swAnswer = new StringWriter();
+            OutputWriter outAnswer = new OutputWriter(swAnswer);
+            tests.add(new Test(sw.toString(), swAnswer.toString()));
+        }
+        return tests;
     }
 }

@@ -1,14 +1,13 @@
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.BufferedWriter;
 import java.util.InputMismatchException;
-import java.util.Comparator;
+import java.io.InputStream;
+import java.util.NoSuchElementException;
+import java.io.OutputStreamWriter;
+import java.math.BigInteger;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.NoSuchElementException;
 import java.io.Writer;
-import java.math.BigInteger;
-import java.io.InputStream;
+import java.io.IOException;
 
 /**
  * Built using CHelper plug-in
@@ -21,30 +20,15 @@ public class Main {
 		OutputStream outputStream = System.out;
 		InputReader in = new InputReader(inputStream);
 		OutputWriter out = new OutputWriter(outputStream);
-		TaskB solver = new TaskB();
+		TaskTam solver = new TaskTam();
 		solver.solve(1, in, out);
 		out.close();
 	}
 }
 
-class TaskB {
+class TaskTam {
     public void solve(int testNumber, InputReader in, OutputWriter out) {
-        int count = in.readInt();
-        int[] A = IOUtils.readIntArray(in, count);
-
-        int answer = 0;
-        for (int i = 0; i < count; i++) {
-            if (A[i] == 1) {
-                if (i - 1 >= 0 && A[i - 1] == 0)
-                    answer += 2;
-                else
-                    answer += 1;
-            }
-        }
-
-        if (A[0] == 0)
-            answer = Math.max(answer - 1, 0);
-        out.printLine(answer);
+        out.printLine(in.readInt() + in.readInt());
     }
 }
 
@@ -114,10 +98,6 @@ class OutputWriter {
         writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
     }
 
-    public OutputWriter(Writer writer) {
-        this.writer = new PrintWriter(writer);
-    }
-
     public void print(Object...objects) {
         for (int i = 0; i < objects.length; i++) {
             if (i != 0)
@@ -133,17 +113,6 @@ class OutputWriter {
 
     public void close() {
         writer.close();
-    }
-
-}
-
-class IOUtils {
-
-    public static int[] readIntArray(InputReader in, int size) {
-        int[] array = new int[size];
-        for (int i = 0; i < size; i++)
-            array[i] = in.readInt();
-        return array;
     }
 
 }
