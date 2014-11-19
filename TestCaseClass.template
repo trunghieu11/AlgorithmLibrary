@@ -7,7 +7,7 @@ import net.egork.chelper.tester.TestCase;
 import java.io.StringWriter;
 import java.util.*;
 
-public class TaskTamTestCase {
+public class %TestCaseClass% {
     @TestCase
     public Collection<Test> loadTests() {
         List<Test> tests = new ArrayList<Test>();
