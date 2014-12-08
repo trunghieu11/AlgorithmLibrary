@@ -10,6 +10,7 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class ArrayUtils {
+    private static double epsilon = 1e-8;
     private static int[] tempInt = new int[0];
 
     public static int[] createOrder(int size) {
@@ -537,6 +538,28 @@ public class ArrayUtils {
             return -1;
     }
 
+    public static int searchLower(double[] array, double value) {
+        int count = array.length;
+
+        int left = 0;
+        int right = count - 1;
+
+        while (right - left > 1) {
+            int mid = (right + left) >> 1;
+            if (array[mid] - value > -epsilon)
+                right = mid;
+            else
+                left = mid;
+        }
+
+        if (epsilon < value - array[right])
+            return right;
+        else if (epsilon < value - array[left])
+            return left;
+        else
+            return -1;
+    }
+
     public static int searchLowerAndEqual(int[] array, long value) {
         int count = array.length;
 
@@ -576,6 +599,28 @@ public class ArrayUtils {
         if (array[right] <= value)
             return right;
         else if (array[left] <= value)
+            return left;
+        else
+            return -1;
+    }
+
+    public static int searchLowerAndEqual(double[] array, double value) {
+        int count = array.length;
+
+        int left = 0;
+        int right = count - 1;
+
+        while (right - left > 1) {
+            int mid = (right + left) >> 1;
+            if (array[mid] - value > epsilon)
+                right = mid;
+            else
+                left = mid;
+        }
+
+        if (-epsilon < value - array[right])
+            return right;
+        else if (-epsilon < value - array[left])
             return left;
         else
             return -1;
@@ -625,6 +670,28 @@ public class ArrayUtils {
             return -1;
     }
 
+    public static int searchGreater(double[] array, double value) {
+        int count = array.length;
+
+        int left = 0;
+        int right = count - 1;
+
+        while (right - left > 1) {
+            int mid = (right + left) >> 1;
+            if (epsilon < array[mid] - value)
+                right = mid;
+            else
+                left = mid;
+        }
+
+        if (array[left] - value > epsilon)
+            return left;
+        else if (array[right] - value > epsilon)
+            return right;
+        else
+            return -1;
+    }
+
     public static int searchGreaterAndEqual(int[] array, long value) {
         int count = array.length;
 
@@ -664,6 +731,28 @@ public class ArrayUtils {
         if (array[left] >= value)
             return left;
         else if (array[right] >= value)
+            return right;
+        else
+            return -1;
+    }
+
+    public static int searchGreaterAndEqual(double[] array, double value) {
+        int count = array.length;
+
+        int left = 0;
+        int right = count - 1;
+
+        while (right - left > 1) {
+            int mid = (right + left) >> 1;
+            if (-epsilon < array[mid] - value)
+                right = mid;
+            else
+                left = mid;
+        }
+
+        if (array[left] - value > -epsilon)
+            return left;
+        else if (array[right] - value > -epsilon)
             return right;
         else
             return -1;
