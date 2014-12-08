@@ -29,11 +29,9 @@ public class GeometryUtils {
         if (count <= 2)
             return 0.0;
         for (int i = 1; i < count; i++)
-            answer += (points[i].x - points[i - 1].x) * (points[i].y + points[i].y);
-        answer += (points[0].x - points[count - 1].x) * (points[0].y + points[count - 1].y);
+            answer += points[i - 1].x * points[i].y - points[i - 1].y * points[i].x;
+        answer += points[count - 1].x * points[0].y - points[count - 1].y * points[0].x;
         answer /= 2.0;
-        if (answer < 0)
-            answer = -answer;
-        return answer;
+        return Math.abs(answer);
     }
 }

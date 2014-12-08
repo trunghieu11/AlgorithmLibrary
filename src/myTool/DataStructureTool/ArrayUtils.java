@@ -24,10 +24,10 @@ public class ArrayUtils {
     }
 
     public static int[] sort(int[] array, int from, int to, IntComparator comparator) {
-        new IntArray(array).subList(from, to).inPlaceSort(comparator);
-//        ensureCapacityInt(to - from);
-//        System.arraycopy(array, from, tempInt, 0, to - from);
-//        sortImpl(array, from, to, tempInt, 0, to - from, comparator);
+        if (from == 0 && to == array.length)
+            new IntArray(array).inPlaceSort(comparator);
+        else
+            new IntArray(array).subList(from, to).inPlaceSort(comparator);
         return array;
     }
 
@@ -233,6 +233,40 @@ public class ArrayUtils {
             for(int i = 1;i <= 65536;i++)b[i]+=b[i-1];
             for(int i = 0;i < f.length;i++)to[b[f[i]>>>16]++] = f[i];
             int[] d = f; f = to;to = d;
+        }
+        return f;
+    }
+
+    public static long[] radixSort(long[] f)
+    {
+        long[] to = new long[f.length];
+        {
+            int[] b = new int[65537];
+            for(int i = 0;i < f.length;i++)b[1+(int)(f[i]&0xffff)]++;
+            for(int i = 1;i <= 65536;i++)b[i]+=b[i-1];
+            for(int i = 0;i < f.length;i++)to[b[(int)(f[i]&0xffff)]++] = f[i];
+            long[] d = f; f = to;to = d;
+        }
+        {
+            int[] b = new int[65537];
+            for(int i = 0;i < f.length;i++)b[1+(int)(f[i]>>>16&0xffff)]++;
+            for(int i = 1;i <= 65536;i++)b[i]+=b[i-1];
+            for(int i = 0;i < f.length;i++)to[b[(int)(f[i]>>>16&0xffff)]++] = f[i];
+            long[] d = f; f = to;to = d;
+        }
+        {
+            int[] b = new int[65537];
+            for(int i = 0;i < f.length;i++)b[1+(int)(f[i]>>>32&0xffff)]++;
+            for(int i = 1;i <= 65536;i++)b[i]+=b[i-1];
+            for(int i = 0;i < f.length;i++)to[b[(int)(f[i]>>>32&0xffff)]++] = f[i];
+            long[] d = f; f = to;to = d;
+        }
+        {
+            int[] b = new int[65537];
+            for(int i = 0;i < f.length;i++)b[1+(int)(f[i]>>>48&0xffff)]++;
+            for(int i = 1;i <= 65536;i++)b[i]+=b[i-1];
+            for(int i = 0;i < f.length;i++)to[b[(int)(f[i]>>>48&0xffff)]++] = f[i];
+            long[] d = f; f = to;to = d;
         }
         return f;
     }
