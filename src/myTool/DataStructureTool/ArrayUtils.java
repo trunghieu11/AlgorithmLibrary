@@ -552,9 +552,9 @@ public class ArrayUtils {
                 left = mid;
         }
 
-        if (epsilon < value - array[right])
+        if (value - array[right] > epsilon)
             return right;
-        else if (epsilon < value - array[left])
+        else if (value - array[left] > epsilon)
             return left;
         else
             return -1;
@@ -618,9 +618,9 @@ public class ArrayUtils {
                 left = mid;
         }
 
-        if (-epsilon < value - array[right])
+        if (value - array[right] > -epsilon)
             return right;
-        else if (-epsilon < value - array[left])
+        else if (value - array[left] > -epsilon)
             return left;
         else
             return -1;
@@ -678,7 +678,7 @@ public class ArrayUtils {
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
-            if (epsilon < array[mid] - value)
+            if (array[mid] - value > epsilon)
                 right = mid;
             else
                 left = mid;
@@ -744,7 +744,7 @@ public class ArrayUtils {
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
-            if (-epsilon < array[mid] - value)
+            if (array[mid] - value > -epsilon)
                 right = mid;
             else
                 left = mid;
