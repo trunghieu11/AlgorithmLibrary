@@ -528,11 +528,15 @@ public class ArrayUtils {
         return -1;
     }
 
-    public static int searchLower(int[] array, long value) {
-        int count = array.length;
 
-        int left = 0;
-        int right = count - 1;
+    /* Searching */
+    public static int searchLower(int[] array, int value) {
+        return searchLower(array, value, 0, array.length - 1);
+    }
+
+    public static int searchLower(int[] array, int value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -551,10 +555,12 @@ public class ArrayUtils {
     }
 
     public static int searchLower(long[] array, long value) {
-        int count = array.length;
+        return searchLower(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchLower(long[] array, long value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -573,10 +579,12 @@ public class ArrayUtils {
     }
 
     public static int searchLower(double[] array, double value) {
-        int count = array.length;
+        return searchLower(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchLower(double[] array, double value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -594,11 +602,13 @@ public class ArrayUtils {
             return -1;
     }
 
-    public static int searchLowerAndEqual(int[] array, long value) {
-        int count = array.length;
+    public static int searchLowerAndEqual(int[] array, int value) {
+        return searchLowerAndEqual(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchLowerAndEqual(int[] array, int value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -617,10 +627,12 @@ public class ArrayUtils {
     }
 
     public static int searchLowerAndEqual(long[] array, long value) {
-        int count = array.length;
+        return searchLowerAndEqual(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchLowerAndEqual(long[] array, long value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -639,10 +651,12 @@ public class ArrayUtils {
     }
 
     public static int searchLowerAndEqual(double[] array, double value) {
-        int count = array.length;
+        return searchLowerAndEqual(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchLowerAndEqual(double[] array, double value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -660,11 +674,13 @@ public class ArrayUtils {
             return -1;
     }
 
-    public static int searchGreater(int[] array, long value) {
-        int count = array.length;
+    public static int searchGreater(int[] array, int value) {
+        return searchGreater(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchGreater(int[] array, int value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -683,10 +699,12 @@ public class ArrayUtils {
     }
 
     public static int searchGreater(long[] array, long value) {
-        int count = array.length;
+        return searchGreater(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchGreater(long[] array, long value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -705,10 +723,12 @@ public class ArrayUtils {
     }
 
     public static int searchGreater(double[] array, double value) {
-        int count = array.length;
+        return searchGreater(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchGreater(double[] array, double value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -726,11 +746,13 @@ public class ArrayUtils {
             return -1;
     }
 
-    public static int searchGreaterAndEqual(int[] array, long value) {
-        int count = array.length;
+    public static int searchGreaterAndEqual(int[] array, int value) {
+        return searchGreaterAndEqual(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchGreaterAndEqual(int[] array, int value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -749,10 +771,12 @@ public class ArrayUtils {
     }
 
     public static int searchGreaterAndEqual(long[] array, long value) {
-        int count = array.length;
+        return searchGreaterAndEqual(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchGreaterAndEqual(long[] array, long value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
@@ -771,10 +795,12 @@ public class ArrayUtils {
     }
 
     public static int searchGreaterAndEqual(double[] array, double value) {
-        int count = array.length;
+        return searchGreaterAndEqual(array, value, 0, array.length - 1);
+    }
 
-        int left = 0;
-        int right = count - 1;
+    public static int searchGreaterAndEqual(double[] array, double value, int from, int to) {
+        int left = from;
+        int right = to;
 
         while (right - left > 1) {
             int mid = (right + left) >> 1;
