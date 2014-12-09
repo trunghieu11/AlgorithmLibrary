@@ -495,13 +495,6 @@ public class ArrayUtils {
         return result;
     }
 
-    public static int[] makeIndexArray(int count) {
-        int[] answer = new int[count];
-        for (int i = 0; i < count; i++)
-            answer[i] = i;
-        return answer;
-    }
-
     public static int count(int[] array, int value) {
         int result = 0;
         for (int i : array) {
