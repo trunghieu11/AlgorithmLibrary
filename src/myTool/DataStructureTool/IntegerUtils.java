@@ -345,4 +345,14 @@ public class IntegerUtils {
 
         return Arrays.copyOf(ret, pos);
     }
+
+    public static boolean isSquare(int x) {
+        int square = (int)Math.sqrt(x);
+        return square * square == x;
+    }
+
+    public static boolean isSquare(long x) {
+        long square = (long)Math.sqrt(x);
+        return square * square == x;
+    }
 }

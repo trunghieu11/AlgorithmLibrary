@@ -1,0 +1,60 @@
+19 Chef Under Pressure
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+84 8 4
+8
+3 2
+2 1
+1 8
+8 6
+8 7
+7 4
+4 5
+3
+2
+3
+4
+1
+1
+4
+4
+8
+2 1
+2 2
+2 3
+2 4
+8 1
+8 2
+8 3
+8 4
+
+16 5
+2
+3
+4
+5
+2
+1
+4
+
+1
+8 src/main
+7 -Xmx64M
+4 Main
+22 main.ChefUnderPressure
+39 net.egork.chelper.checkers.TokenChecker
+0 
+1
+30 main.ChefUnderPressureTestCase
+10 2014.12.12
+23 December Challenge 2014
+1
+25 myTool.IOTool.InputReader
+26 myTool.IOTool.OutputWriter
+0
+0
