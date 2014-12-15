@@ -36,6 +36,10 @@ public class ArrayUtils {
         reverse(array, 0, array.length);
     }
 
+    public static void reverse(long[] array) {
+        reverse(array, 0, array.length);
+    }
+
     public static void reverse(double[] array) {
         reverse(array, 0, array.length);
     }
@@ -43,6 +47,14 @@ public class ArrayUtils {
     public static void reverse(int[] array, int from, int to) {
         for (int i = from, j = to - 1; i < j; i++, j--) {
             int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+
+    public static void reverse(long[] array, int from, int to) {
+        for (int i = from, j = to - 1; i < j; i++, j--) {
+            long temp = array[i];
             array[i] = array[j];
             array[j] = temp;
         }
