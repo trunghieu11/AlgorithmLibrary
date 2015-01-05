@@ -540,6 +540,9 @@ public class ArrayUtils {
     }
 
     public static int searchLower(int[] array, int value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -564,6 +567,9 @@ public class ArrayUtils {
     }
 
     public static int searchLower(long[] array, long value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -588,6 +594,9 @@ public class ArrayUtils {
     }
 
     public static int searchLower(double[] array, double value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -612,6 +621,9 @@ public class ArrayUtils {
     }
 
     public static int searchLowerAndEqual(int[] array, int value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -636,6 +648,9 @@ public class ArrayUtils {
     }
 
     public static int searchLowerAndEqual(long[] array, long value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -660,6 +675,9 @@ public class ArrayUtils {
     }
 
     public static int searchLowerAndEqual(double[] array, double value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -684,6 +702,9 @@ public class ArrayUtils {
     }
 
     public static int searchGreater(int[] array, int value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -708,6 +729,9 @@ public class ArrayUtils {
     }
 
     public static int searchGreater(long[] array, long value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -732,6 +756,9 @@ public class ArrayUtils {
     }
 
     public static int searchGreater(double[] array, double value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -756,6 +783,9 @@ public class ArrayUtils {
     }
 
     public static int searchGreaterAndEqual(int[] array, int value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -780,6 +810,9 @@ public class ArrayUtils {
     }
 
     public static int searchGreaterAndEqual(long[] array, long value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
@@ -804,6 +837,9 @@ public class ArrayUtils {
     }
 
     public static int searchGreaterAndEqual(double[] array, double value, int from, int to) {
+        if (array.length == 0)
+            return -1;
+
         int left = from;
         int right = to;
 
