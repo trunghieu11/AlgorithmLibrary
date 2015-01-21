@@ -445,21 +445,24 @@ public class ArrayUtils {
         }
     }
 
-    public static boolean next_permutation(int[] p) {
-        for (int a = p.length - 2; a >= 0; --a)
-            if (p[a] < p[a + 1])
-                for (int b = p.length - 1;; --b)
-                    if (p[b] > p[a]) {
-                        int t = p[a];
-                        p[a] = p[b];
-                        p[b] = t;
-                        for (++a, b = p.length - 1; a < b; ++a, --b) {
-                            t = p[a];
-                            p[a] = p[b];
-                            p[b] = t;
+    public static boolean nextPermutation(int[] array) {
+        for (int i = array.length - 2; i >= 0; --i) {
+            if (array[i] < array[i + 1]) {
+                for (int j = array.length - 1; ; --j) {
+                    if (array[j] > array[i]) {
+                        int temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                        for (++i, j = array.length - 1; i < j; ++i, --j) {
+                            temp = array[i];
+                            array[i] = array[j];
+                            array[j] = temp;
                         }
                         return true;
                     }
+                }
+            }
+        }
         return false;
     }
 
