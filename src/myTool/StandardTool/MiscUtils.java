@@ -154,6 +154,15 @@ public class MiscUtils {
             return true;
         if (word.charAt(0) != word.charAt(word.length() - 1))
             return false;
-        return isPalindrome(word.substring(1, word.length() - 1));
+        int i = 0;
+        int j = word.length() - 1;
+        while (i < j) {
+            if (word.charAt(i) != word.charAt(j)) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
     }
 }
