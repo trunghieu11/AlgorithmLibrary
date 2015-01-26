@@ -446,14 +446,15 @@ public class ArrayUtils {
     }
 
     public static boolean nextPermutation(int[] array) {
-        for (int i = array.length - 2; i >= 0; --i) {
+        int count = array.length;
+        for (int i = count - 2; i >= 0; --i) {
             if (array[i] < array[i + 1]) {
-                for (int j = array.length - 1; ; --j) {
+                for (int j = count - 1; ; --j) {
                     if (array[j] > array[i]) {
                         int temp = array[i];
                         array[i] = array[j];
                         array[j] = temp;
-                        for (++i, j = array.length - 1; i < j; ++i, --j) {
+                        for (++i, j = count - 1; i < j; ++i, --j) {
                             temp = array[i];
                             array[i] = array[j];
                             array[j] = temp;
