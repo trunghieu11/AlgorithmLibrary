@@ -19,7 +19,7 @@ public abstract class BinaryIndexTree {
         return res;
     }
 
-    public void update(int x, int v) {
+    public void update(int x, long v) {
         for (; x < bit.length; x += x & -x)
             bit[x] = joinValue(bit[x], v);
     }
