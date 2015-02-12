@@ -7,11 +7,13 @@ public abstract class BinaryIndexTree {
     protected int size;
     protected long[] bit;
 
+    // remember add 1 to size
     public BinaryIndexTree(int size) {
         this.size = size;
         this.bit = new long[this.size];
     }
 
+    // remember add 1 to x
     public long get(int x) {
         long res = 0;
         for (; x > 0; x -= x & -x)
@@ -19,6 +21,7 @@ public abstract class BinaryIndexTree {
         return res;
     }
 
+    // remember add 1 to x
     public void update(int x, long v) {
         for (; x < bit.length; x += x & -x)
             bit[x] = joinValue(bit[x], v);

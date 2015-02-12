@@ -58,6 +58,24 @@ public class Matrix {
         this.data = data;
     }
 
+    public static long[] convert(long[][] matrix) {
+        long[] result = new long[matrix.length * matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++)
+                result[i * matrix.length + j] = matrix[i][j];
+        }
+        return result;
+    }
+
+    public static long[][] convert(long[] matrix, int side) {
+        long[][] result = new long[side][side];
+        for (int i = 0; i < side; i++) {
+            for (int j = 0; j < side; j++)
+                result[i][j] = matrix[i * side + j];
+        }
+        return result;
+    }
+
     public static long[] power(long[] matrix, long exponent, long mod, int side) {
         long[] result = new long[matrix.length];
         long[] temp = new long[result.length];

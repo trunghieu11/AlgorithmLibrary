@@ -19,6 +19,13 @@ public class BidirectionalGraph extends Graph {
         transposedEdge = new int[2 * edgeCapacity];
     }
 
+    public static BidirectionalGraph createWeightedGraph(int vertexCount, int[] from, int[] to, long[] weight) {
+        BidirectionalGraph graph = new BidirectionalGraph(vertexCount, from.length);
+        for (int i = 0; i < from.length; i++)
+            graph.addWeightedEdge(from[i], to[i], weight[i]);
+        return graph;
+    }
+
     public static BidirectionalGraph createGraph(int vertexCount, int[] from, int[] to) {
         BidirectionalGraph graph = new BidirectionalGraph(vertexCount, from.length);
         for (int i = 0; i < from.length; i++)

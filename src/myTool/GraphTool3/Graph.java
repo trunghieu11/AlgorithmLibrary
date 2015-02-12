@@ -256,17 +256,51 @@ public class Graph {
         return id;
     }
 
+    public final int nextOutbound(int id) {
+        id = nextOutbound[id];
+        while (id != -1 && isRemoved(id))
+            id = nextOutbound[id];
+        return id;
+    }
+
+    private void initInbound() {
+        if (firstInbound == null) {
+            firstInbound = new int[firstOutbound.length];
+            Arrays.fill(firstInbound, 0, vertexCount, -1);
+            nextInbound = new int[from.length];
+            for (int i = 0; i < edgeCount; i++) {
+                nextInbound[i] = firstInbound[to[i]];
+                firstInbound[to[i]] = i;
+            }
+        }
+    }
+
+    public final int firstInbound(int vertex) {
+        initInbound();
+        int id = firstInbound[vertex];
+        while (id != -1 && isRemoved(id))
+            id = nextInbound[id];
+        return id;
+    }
+
+    public final int nextInbound(int id) {
+        initInbound();
+        id = nextInbound[id];
+        while (id != -1 && isRemoved(id))
+            id = nextInbound[id];
+        return id;
+    }
+
     public final long weight(int id) {
         if (weight == null)
             return 0;
         return weight[id];
     }
 
-    public final int nextOutbound(int id) {
-        id = nextOutbound[id];
-        while (id != -1 && isRemoved(id))
-            id = nextOutbound[id];
-        return id;
+    public final int reverse(int id) {
+        if (reverseEdge == null)
+            return -1;
+        return reverseEdge[id];
     }
 
     public final long capacity(int id) {

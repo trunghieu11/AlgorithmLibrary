@@ -301,6 +301,13 @@ public class ArrayUtils {
         return answer;
     }
 
+    public static long[] asLong(int[] array) {
+        long[] result = new long[array.length];
+        for (int i = 0; i < array.length; i++)
+            result[i] = array[i];
+        return result;
+    }
+
     private static class IntList extends AbstractList<Integer> implements RandomAccess {
 
         int[] array;
