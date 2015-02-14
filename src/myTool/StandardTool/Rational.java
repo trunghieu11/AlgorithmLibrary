@@ -53,4 +53,22 @@ public class Rational implements Comparable<Rational> {
         result = 31 * result + (int) (denominator ^ (denominator >>> 32));
         return result;
     }
+
+    public Rational add(Rational other) {
+        return new Rational(numerator * other.denominator + denominator * other.numerator,
+                denominator * other.denominator);
+    }
+
+    public Rational subtract(Rational other) {
+        return new Rational(numerator * other.denominator - denominator * other.numerator,
+                denominator * other.denominator);
+    }
+
+    public Rational divide(Rational other) {
+        return new Rational(numerator * other.denominator, other.numerator * denominator);
+    }
+
+    public Rational multiply(Rational other) {
+        return new Rational(numerator * other.numerator, other.denominator * denominator);
+    }
 }

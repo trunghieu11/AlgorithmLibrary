@@ -7,6 +7,6 @@ package myTool.DataStructureTool;
  * Time: 10:00 PM
  * To change this template use File | Settings | File Templates.
  */
-abstract public class IntSet extends IntCollection {
+public abstract class IntSet extends IntCollection {
 
 }

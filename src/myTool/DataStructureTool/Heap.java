@@ -116,4 +116,27 @@ public class Heap {
         shiftDown(0);
         return result;
     }
+
+    public int peek() {
+        if (isEmpty())
+            throw new IndexOutOfBoundsException();
+        return elements[0];
+    }
+
+    public int remove(int element) {
+        int index = getIndex(element);
+        if (index == -1)
+            throw new IndexOutOfBoundsException();
+        int result = elements[index];
+        at[result] = -1;
+        if (index == size - 1) {
+            size--;
+            return result;
+        }
+        elements[index] = elements[--size];
+        at[elements[index]] = index;
+        shiftDown(index);
+        shiftUp(index);
+        return result;
+    }
 }

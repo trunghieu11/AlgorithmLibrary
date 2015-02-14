@@ -308,6 +308,46 @@ public class ArrayUtils {
         return result;
     }
 
+    public static int[] sort(int[] array) {
+        return sort(array, IntComparator.DEFAULT);
+    }
+
+    public static int minPosition(int[] array) {
+        return minPosition(array, 0, array.length);
+    }
+
+    public static int minPosition(int[] array, int from, int to) {
+        if (from >= to)
+            return -1;
+        int min = array[from];
+        int result = from;
+        for (int i = from + 1; i < to; i++) {
+            if (array[i] < min) {
+                min = array[i];
+                result = i;
+            }
+        }
+        return result;
+    }
+
+    public static int maxPosition(int[] array) {
+        return maxPosition(array, 0, array.length);
+    }
+
+    public static int maxPosition(int[] array, int from, int to) {
+        if (from >= to)
+            return -1;
+        int max = array[from];
+        int result = from;
+        for (int i = from + 1; i < to; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                result = i;
+            }
+        }
+        return result;
+    }
+
     private static class IntList extends AbstractList<Integer> implements RandomAccess {
 
         int[] array;

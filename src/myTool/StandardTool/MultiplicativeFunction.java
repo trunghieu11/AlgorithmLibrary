@@ -9,7 +9,7 @@ import myTool.DataStructureTool.IntegerUtils;
  * Time: 9:11 AM
  * To change this template use File | Settings | File Templates.
  */
-abstract public class MultiplicativeFunction {
+public abstract class MultiplicativeFunction {
     public static final MultiplicativeFunction MOBIUS = new MultiplicativeFunction() {
         @Override
         protected long value(long p, int exponent, long power) {

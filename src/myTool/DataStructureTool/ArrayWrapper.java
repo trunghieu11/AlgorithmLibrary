@@ -9,7 +9,7 @@ import java.util.Iterator;
  * Time: 5:16 PM
  * To change this template use File | Settings | File Templates.
  */
-abstract public class ArrayWrapper<T> implements Iterable<T> {
+public abstract class ArrayWrapper<T> implements Iterable<T> {
     protected final int from;
     protected final int to;
     protected final int size;

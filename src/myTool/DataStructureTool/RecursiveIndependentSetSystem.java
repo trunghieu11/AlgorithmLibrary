@@ -42,6 +42,11 @@ public class RecursiveIndependentSetSystem implements IndependentSetSystem {
         return color[index] = get(color[index]);
     }
 
+    @Override
+    public void setListener(Listener listener) {
+        this.listener = listener;
+    }
+
     public int getSetCount() {
         return setCount;
     }

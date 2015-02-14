@@ -56,6 +56,11 @@ public class ListIndependentSetSystem implements IndependentSetSystem {
         return parent[index];
     }
 
+    @Override
+    public void setListener(Listener listener) {
+        this.listener = listener;
+    }
+
     public int getSetCount() {
         return setCount;
     }

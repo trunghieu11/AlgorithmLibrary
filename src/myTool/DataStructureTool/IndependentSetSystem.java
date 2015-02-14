@@ -14,6 +14,8 @@ public interface IndependentSetSystem {
 
     int get(int index);
 
+    void setListener(Listener listener);
+
     public static interface Listener {
         public void joined(int joinedRoot, int root);
     }

@@ -88,4 +88,8 @@ public class LCA {
     public int getLCA(int first, int second) {
         return (int) lcaTree.query(Math.min(position[first], position[second]), Math.max(position[first], position[second]));
     }
+
+    public int getPathLength(int first, int second) {
+        return level[first] + level[second] - 2 * level[getLCA(first, second)];
+    }
 }

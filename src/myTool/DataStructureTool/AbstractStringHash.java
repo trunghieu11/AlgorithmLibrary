@@ -9,7 +9,7 @@ import java.util.Random;
  * Time: 10:45 PM
  * To change this template use File | Settings | File Templates.
  */
-abstract public class AbstractStringHash implements StringHash{
+public abstract class AbstractStringHash implements StringHash{
     public static final long MULTIPLIER;
     protected static final long FIRST_REVERSE_MULTIPLIER;
     protected static final long SECOND_REVERSE_MULTIPLIER;
