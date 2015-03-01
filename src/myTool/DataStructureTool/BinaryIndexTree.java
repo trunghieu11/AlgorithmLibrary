@@ -1,5 +1,7 @@
 package myTool.DataStructureTool;
 
+import java.util.Arrays;
+
 /**
  * Created by OnePiece on 11/20/2014.
  */
@@ -28,4 +30,8 @@ public abstract class BinaryIndexTree {
     }
 
     protected abstract long joinValue(long was, long delta);
+
+    public void clear() {
+        Arrays.fill(bit, 0);
+    }
 }
