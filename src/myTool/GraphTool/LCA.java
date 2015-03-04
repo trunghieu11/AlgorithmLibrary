@@ -53,7 +53,7 @@ public class LCA {
         return timeIn[first] <= timeIn[second] && timeOut[second] <= timeOut[first];
     }
 
-    public int goUp(int first, int second) {
+    private int goUp(int first, int second) {
         for (int i = len - 1; i >= 0; i--) {
             if (!isAncestor(ancestor[first][i], second)) {
                 first = ancestor[first][i];
