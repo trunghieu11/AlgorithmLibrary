@@ -88,7 +88,7 @@ public class LCA {
             }
         }
 
-        return vertex;
+        return ancestor[vertex][0];
     }
 
     public int getAncestorAt(int vertex, int idx) {
