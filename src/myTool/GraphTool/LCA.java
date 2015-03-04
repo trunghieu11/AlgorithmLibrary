@@ -4,7 +4,7 @@ package myTool.GraphTool;
  * Created by nthieu1 on 3/4/2015.
  */
 public class LCA {
-    private int len = 30;
+    private int len;
     private int timer = 0;
 
     private final int[][] graph;
@@ -19,7 +19,7 @@ public class LCA {
 
     public LCA(int[][] graph, int root) {
         int graphSize = graph.length;
-//        len = Integer.numberOfTrailingZeros(Integer.highestOneBit(graphSize - 1)) + 1;
+        len = Integer.numberOfTrailingZeros(Integer.highestOneBit(graphSize - 1)) + 1;
 
         this.graph = graph;
         level = new int[graphSize];
