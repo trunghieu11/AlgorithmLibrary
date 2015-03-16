@@ -8,22 +8,29 @@ import java.util.Arrays;
 public abstract class BinaryIndexTree {
     protected int size;
     protected long[] bit;
+    protected long initValue;
 
-    // remember add 1 to size
+    // index 0 ... n - 1
     public BinaryIndexTree(int size) {
-        this.size = size;
-        this.bit = new long[this.size];
+        this(size, 0);
     }
 
-    // remember add 1 to x
+    public BinaryIndexTree(int size, long initValue) {
+        this.size = size;
+        this.bit = new long[this.size];
+        this.initValue = initValue;
+        Arrays.fill(this.bit, this.initValue);
+    }
+
+    // index 0 ... n - 1
     public long get(int x) {
-        long res = 0;
+        long res = this.initValue;
         for (; x > 0; x -= x & -x)
             res = joinValue(res, bit[x]);
         return res;
     }
 
-    // remember add 1 to x
+    // index 0 ... n - 1
     public void update(int x, long v) {
         for (; x < bit.length; x += x & -x)
             bit[x] = joinValue(bit[x], v);
