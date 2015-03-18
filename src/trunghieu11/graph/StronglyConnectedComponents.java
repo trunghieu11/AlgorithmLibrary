@@ -48,7 +48,8 @@ public class StronglyConnectedComponents {
 				index++;
 			}
 		}
-		return Pair.makePair(condensed, result);
+        return new Pair<int[], Graph>(condensed, result);
+//		return Pair.makePair(condensed, result);
 	}
 
 	private void secondDFS(int vertexID) {

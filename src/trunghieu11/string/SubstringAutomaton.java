@@ -18,8 +18,8 @@ public class SubstringAutomaton {
 	}
 
 	public SubstringAutomaton(String[] words, char first, char last) {
-		Indexer<Long> indexer = new Indexer<>();
-		Counter<Long> fullWords = new Counter<>();
+		Indexer<Long> indexer = new Indexer<Long>();
+		Counter<Long> fullWords = new Counter<Long>();
 		StringHash[] hashes = new StringHash[words.length];
 		int totalLength = 0;
 		for (int i = 0; i < words.length; i++) {

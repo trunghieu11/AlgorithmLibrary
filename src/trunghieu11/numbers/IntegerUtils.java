@@ -226,11 +226,13 @@ public class IntegerUtils {
 					power++;
 					number /= i;
 				} while (number % i == 0);
-				result.add(Pair.makePair(i, power));
+                result.add(new Pair<Long, Integer>(i, power));
+//				result.add(Pair.makePair(i, power));
 			}
 		}
 		if (number != 1)
-			result.add(Pair.makePair(number, 1));
+            result.add(new Pair<Long, Integer>(number, 1));
+//			result.add(Pair.makePair(number, 1));
 		return result;
 	}
 

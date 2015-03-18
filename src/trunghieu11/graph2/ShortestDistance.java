@@ -1,9 +1,9 @@
 package trunghieu11.graph2;
 
-import myTool.DataStructureTool.Heap;
-import myTool.DataStructureTool.IntComparator;
-import myTool.DataStructureTool.IntegerUtils;
-import myTool.StandardTool.Pair;
+import trunghieu11.collections.Pair;
+import trunghieu11.collections.comparators.IntComparator;
+import trunghieu11.collections.heap.Heap;
+import trunghieu11.numbers.IntegerUtils;
 
 import java.util.Arrays;
 import java.util.HashMap;

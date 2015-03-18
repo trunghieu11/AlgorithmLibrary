@@ -1,6 +1,6 @@
 package trunghieu11.graph2;
 
-import myTool.StandardTool.Pair;
+import trunghieu11.collections.Pair;
 
 import java.util.*;
 

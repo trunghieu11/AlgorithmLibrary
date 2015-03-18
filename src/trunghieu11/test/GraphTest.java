@@ -1,7 +1,7 @@
 package trunghieu11.test;
 
-import myTool.StandardTool.MiscUtils;
-import myTool.StandardTool.Pair;
+import trunghieu11.collections.Pair;
+import trunghieu11.misc.MiscUtils;
 
 import java.util.HashSet;
 import java.util.Random;

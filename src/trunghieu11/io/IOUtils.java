@@ -11,13 +11,15 @@ public class IOUtils {
 	public static Pair<Integer, Integer> readIntPair(InputReader in) {
 		int first = in.readInt();
 		int second = in.readInt();
-		return Pair.makePair(first, second);
+        return new Pair<Integer, Integer>(first, second);
+//		return Pair.makePair(first, second);
 	}
 
 	public static Pair<Long, Long> readLongPair(InputReader in) {
 		long first = in.readLong();
 		long second = in.readLong();
-		return Pair.makePair(first, second);
+        return new Pair<Long, Long>(first, second);
+//		return Pair.makePair(first, second);
 	}
 
 	public static int[] readIntArray(InputReader in, int size) {

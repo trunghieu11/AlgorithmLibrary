@@ -176,6 +176,13 @@ public class MiscUtils {
 		}
 	}
 
+    public static void increaseByOne(int[]...arrays) {
+        for (int[] array : arrays) {
+            for (int i = 0; i < array.length; i++)
+                array[i]++;
+        }
+    }
+
 	public static int[] getIntArray(String s) {
 		String[] tokens = s.split(" ");
 		int[] result = new int[tokens.length];

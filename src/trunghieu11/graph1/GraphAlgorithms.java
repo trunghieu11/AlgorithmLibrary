@@ -1,6 +1,6 @@
 package trunghieu11.graph1;
 
-import myTool.StandardTool.Pair;
+import trunghieu11.collections.Pair;
 
 import java.util.*;
 
@@ -28,7 +28,8 @@ public class GraphAlgorithms {
         while (maxFlow != 0) {
             Pair<long[], Edge[]> result = dijkstraAlgorithm(graph, source, phi);
             if (result.first[destination] == Long.MAX_VALUE)
-                return Pair.makePair(cost, flow);
+                return new Pair<Long, Long>(cost, flow);
+//                return Pair.makePair(cost, flow);
             for (int i = 0; i < graph.getSize(); i++) {
                 if (result.first[i] != Long.MAX_VALUE)
                     phi[i] -= result.first[i];
@@ -50,7 +51,8 @@ public class GraphAlgorithms {
                 vertex = result.second[vertex].getSource();
             }
         }
-        return Pair.makePair(cost, flow);
+        return new Pair<Long, Long>(cost, flow);
+//        return Pair.makePair(cost, flow);
     }
 
     public static Pair<long[], Edge[]> dijkstraAlgorithm(Graph graph, int source, long[] phi) {
@@ -60,7 +62,8 @@ public class GraphAlgorithms {
         Edge[] last = new Edge[size];
         Arrays.fill(distance, Long.MAX_VALUE);
         distance[source] = 0;
-        queue.add(Pair.makePair(0L, source));
+        queue.add(new Pair<Long, Integer>(0L, source));
+//        queue.add(Pair.makePair(0L, source));
         boolean[] processed = new boolean[size];
         while (!queue.isEmpty()) {
             int current = queue.poll().second;
@@ -75,11 +78,13 @@ public class GraphAlgorithms {
                 if (distance[next] > distance[current] + weight) {
                     distance[next] = distance[current] + weight;
                     last[next] = edge;
-                    queue.add(Pair.makePair(distance[next], next));
+                    queue.add(new Pair<Long, Integer>(distance[next], next));
+//                    queue.add(Pair.makePair(distance[next], next));
                 }
             }
         }
-        return Pair.makePair(distance, last);
+        return new Pair<long[], Edge[]>(distance, last);
+//        return Pair.makePair(distance, last);
     }
 
     public static Pair<long[], Edge[]> fordBellman(Graph graph, int source, boolean ignoreEmptyEdges) {
@@ -107,7 +112,8 @@ public class GraphAlgorithms {
             if (stepCount > graph.getSize() + 1)
                 return null;
         }
-        return Pair.makePair(distances, last);
+        return new Pair<long[], Edge[]>(distances, last);
+//        return Pair.makePair(distances, last);
     }
 
     public static class DistanceResult {

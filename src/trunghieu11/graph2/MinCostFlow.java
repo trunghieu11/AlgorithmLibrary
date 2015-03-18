@@ -1,9 +1,9 @@
 package trunghieu11.graph2;
 
-import myTool.DataStructureTool.Heap;
-import myTool.DataStructureTool.IntComparator;
-import myTool.DataStructureTool.IntegerUtils;
-import myTool.StandardTool.Pair;
+import trunghieu11.collections.Pair;
+import trunghieu11.collections.comparators.IntComparator;
+import trunghieu11.collections.heap.Heap;
+import trunghieu11.numbers.IntegerUtils;
 
 import java.util.Arrays;
 
@@ -98,7 +98,8 @@ public class MinCostFlow<V> {
             else
                 dijkstraAlgorithmFull();
             if (lastEdge[destinationID] == -1)
-                return Pair.makePair(cost, flow);
+                return new Pair<Long, Long>(cost, flow);
+//                return Pair.makePair(cost, flow);
             for (int i = 0; i < dijkstraResult.length; i++) {
                 if (dijkstraResult[i] != Long.MAX_VALUE)
                     phi[i] += dijkstraResult[i];
@@ -122,7 +123,8 @@ public class MinCostFlow<V> {
                 vertex = graph.from[edgeID];
             }
         }
-        return Pair.makePair(cost, flow);
+        return new Pair<Long, Long>(cost, flow);
+//        return Pair.makePair(cost, flow);
     }
 
     private void dijkstraAlgorithm() {

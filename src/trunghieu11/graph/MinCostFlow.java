@@ -104,7 +104,8 @@ public class MinCostFlow {
 			else
 				dijkstraAlgorithmFull();
 			if (lastEdge[destination] == -1)
-				return Pair.makePair(cost, flow);
+                return new Pair<Long, Long>(cost, flow);
+//				return Pair.makePair(cost, flow);
 			for (int i = 0; i < dijkstraResult.length; i++) {
 				if (dijkstraResult[i] != Long.MAX_VALUE)
 					phi[i] += dijkstraResult[i];
@@ -128,7 +129,8 @@ public class MinCostFlow {
 				vertex = graph.source(edgeID);
 			}
 		}
-		return Pair.makePair(cost, flow);
+        return new Pair<Long, Long>(cost, flow);
+//		return Pair.makePair(cost, flow);
 	}
 
 	private void dijkstraAlgorithm() {

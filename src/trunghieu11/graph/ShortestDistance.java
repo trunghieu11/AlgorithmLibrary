@@ -72,12 +72,14 @@ public class ShortestDistance {
 				}
 			}
 		}
-		return Pair.makePair(distance, last);
+        return new Pair<long[], int[]>(distance, last);
+//		return Pair.makePair(distance, last);
 	}
 
 	public static Pair<Long, IntList> dijkstraAlgorithm(Graph graph, int source, int destination) {
 		if (source == destination)
-			return Pair.makePair(0L, (IntList)new IntArrayList());
+            return new Pair<Long, IntList>(0L, (IntList)new IntArrayList());
+//			return Pair.makePair(0L, (IntList)new IntArrayList());
 		Pair<long[], int[]> result = dijkstraAlgorithm(graph, source);
 		if (result.second[destination] == -1)
 			return null;
@@ -88,6 +90,7 @@ public class ShortestDistance {
 			id = graph.source(result.second[id]);
 		}
 		path.inPlaceReverse();
-		return Pair.makePair(result.first[destination], path);
+        return new Pair<Long, IntList>(result.first[destination], path);
+//		return Pair.makePair(result.first[destination], path);
 	}
 }
