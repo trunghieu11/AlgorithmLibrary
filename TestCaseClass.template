@@ -1,6 +1,6 @@
 package %package%;
 
-import myTool.IOTool.OutputWriter;
+import trunghieu11.utils.io.OutputWriter;
 import net.egork.chelper.task.Test;
 import net.egork.chelper.tester.TestCase;
 
