@@ -200,8 +200,6 @@ public class MiscUtils {
     public static boolean isPalindrome(String word) {
         if (word.length() <= 1)
             return true;
-        if (word.charAt(0) != word.charAt(word.length() - 1))
-            return false;
         int i = 0;
         int j = word.length() - 1;
         while (i < j) {
