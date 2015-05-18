@@ -23,6 +23,7 @@ public class Graph {
 	public long[] capacity;
 	private int[] reverseEdge;
 	private int[] flags;
+    private int[] deg;
 
 	public Graph(int vertexCount) {
 		this(vertexCount, vertexCount);
@@ -31,6 +32,7 @@ public class Graph {
 	public Graph(int vertexCount, int edgeCapacity) {
 		this.vertexCount = vertexCount;
 		firstOutbound = new int[vertexCount];
+        this.deg = new int[vertexCount];
 		Arrays.fill(firstOutbound, -1);
 
 		from = new int[edgeCapacity];
@@ -75,6 +77,9 @@ public class Graph {
 	}
 
 	public int addEdge(int fromID, int toID, long weight, long capacity, int reverseEdge) {
+        deg[fromID]++;
+        deg[toID]++;
+
 		ensureEdgeCapacity(edgeCount + 1);
 		if (firstOutbound[fromID] != -1)
 			nextOutbound[edgeCount] = firstOutbound[fromID];
@@ -153,6 +158,10 @@ public class Graph {
 	protected final int edgeCapacity() {
 		return from.length;
 	}
+
+    public final int getDeg(int vertex) {
+        return this.deg[vertex];
+    }
 
 	public final Edge edge(int id) {
 		initEdges();
