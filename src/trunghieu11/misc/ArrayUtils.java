@@ -387,6 +387,10 @@ public class ArrayUtils {
         reverse(array, 0, array.length);
     }
 
+    public static void reverse(char[] array) {
+        reverse(array, 0, array.length);
+    }
+
     public static void reverse(int[] array, int from, int to) {
         for (int i = from, j = to - 1; i < j; i++, j--) {
             int temp = array[i];
@@ -406,6 +410,14 @@ public class ArrayUtils {
     public static void reverse(double[] array, int from, int to) {
         for (int i = from, j = to - 1; i < j; i++, j--) {
             double temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+
+    public static void reverse(char[] array, int from, int to) {
+        for (int i = from, j = to - 1; i < j; i++, j--) {
+            char temp = array[i];
             array[i] = array[j];
             array[j] = temp;
         }
@@ -709,6 +721,10 @@ public class ArrayUtils {
 		}
 		return result;
 	}
+
+    public static long rectangleSum(long[][] array, int top, int left, int bottom, int right) {
+        return array[bottom][right] - array[bottom][left] - array[top][right] + array[top][left];
+    }
 
 	public static int[][] transpose(int[][] array) {
 		if (array.length == 0) {
