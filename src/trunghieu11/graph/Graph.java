@@ -303,10 +303,14 @@ public class Graph {
 	}
 
 	public final void removeEdge(int id) {
+        deg[from[id]]--;
+        deg[to[id]]--;
 		setFlag(id, REMOVED_BIT);
 	}
 
 	public final void restoreEdge(int id) {
+        deg[from[id]]++;
+        deg[to[id]]++;
 		removeFlag(id, REMOVED_BIT);
 	}
 
