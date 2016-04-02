@@ -1,0 +1,27 @@
+7 TaskTam
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+18 7
+0 1 0 1 1 -1 1
+2
+1 6
+1
+8 src/main
+16 -Xmx256m -Xss64m
+4 Main
+12 main.TaskTam
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2016.02.26
+0 
+1
+32 trunghieu11.utils.io.InputReader
+33 trunghieu11.utils.io.OutputWriter
+0
+0
