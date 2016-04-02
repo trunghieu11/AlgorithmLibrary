@@ -1,0 +1,40 @@
+34 A - Far Relative’s Birthday Cake
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+2
+0
+14 3
+.CC
+C..
+C.C
+
+2 4
+
+1
+1
+22 4
+CC..
+C..C
+.CC.
+.CC.
+
+2 9
+
+1
+8 src/main
+8 -Xmx256M
+4 Main
+10 main.TaskA
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2016.04.02
+30 Codeforces Round #343 (Div. 2)
+1
+32 trunghieu11.utils.io.InputReader
+33 trunghieu11.utils.io.OutputWriter
+0
+0
