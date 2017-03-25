@@ -1,0 +1,8 @@
+package trunghieu11.generated.collections.function;
+
+/**
+ * @author Egor Kulikov
+ */
+public interface DoubleTask {
+    public void process(double value);
+}
