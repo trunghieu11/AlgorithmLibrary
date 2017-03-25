@@ -9,7 +9,7 @@ import trunghieu11.generated.collections.list.IntArray;
 import trunghieu11.generated.collections.list.LongArray;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * @author Egor Kulikov (kulikov@devexperts.com)

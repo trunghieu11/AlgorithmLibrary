@@ -1,6 +1,6 @@
 package trunghieu11.collections;
 
-import trunghieu11.collections.comparators.IntComparator;
+import trunghieu11.generated.collections.comparator.IntComparator;
 import trunghieu11.misc.ArrayUtils;
 
 /**

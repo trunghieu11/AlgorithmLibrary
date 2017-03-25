@@ -1,7 +1,7 @@
 package trunghieu11.numbers;
 
-import static net.egork.numbers.IntegerUtils.generateFactorial;
-import static net.egork.numbers.IntegerUtils.generateReverseFactorials;
+import static trunghieu11.numbers.IntegerUtils.generateFactorial;
+import static trunghieu11.numbers.IntegerUtils.generateReverseFactorials;
 
 /**
  * @author egor@egork.net
