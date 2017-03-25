@@ -6,7 +6,7 @@ package trunghieu11.string;
 public interface StringHash {
     long hash(int from, int to);
 
-	long hash(int from);
+    long hash(int from);
 
-	int length();
+    int length();
 }
