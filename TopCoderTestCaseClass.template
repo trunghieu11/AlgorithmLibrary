@@ -6,9 +6,16 @@ import net.egork.chelper.tester.TestCase;
 import java.util.*;
 
 public class %TestCaseClass% {
+    private static final int MAXN = 0;
+
     @TestCase
     public Collection<NewTopCoderTest> createTests() {
         List<NewTopCoderTest> tests = new ArrayList<NewTopCoderTest>();
+        Random random = new Random(239);
+        int testCount = 0;
+        for (int testNumber = 0; testNumber < testCount; testNumber++) {
+            // create test here.
+        }
         return tests;
     }
 
