@@ -394,6 +394,7 @@ public class Graph {
             if (firstInbound != null) {
                 firstInbound = resize(firstInbound, newSize);
             }
+            deg = resize(deg, newSize);
         }
     }
 

@@ -49,7 +49,7 @@ public class LCA {
         timeOut[cur] = timer++;
     }
 
-    private boolean isAncestor(int first, int second) {
+    public boolean isAncestor(int first, int second) {
         return timeIn[first] <= timeIn[second] && timeOut[second] <= timeOut[first];
     }
 
