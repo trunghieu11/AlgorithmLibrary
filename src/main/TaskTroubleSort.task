@@ -1,0 +1,31 @@
+15 TaskTroubleSort
+12 MULTI_NUMBER
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+1
+0
+21 2
+5
+5 6 8 4 3
+3
+8 9 7
+22 Case #1: OK
+Case #2: 1
+1
+8 src/main
+6 -Xmx1G
+4 Main
+20 main.TaskTroubleSort
+39 net.egork.chelper.checkers.TokenChecker
+0 
+1
+28 main.TaskTroubleSortTestCase
+10 2018.04.07
+24 Qualification Round 2018
+1
+32 trunghieu11.utils.io.InputReader
+33 trunghieu11.utils.io.OutputWriter
+0
+0

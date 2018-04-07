@@ -1,0 +1,44 @@
+7 TaskTam
+12 MULTI_NUMBER
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+3
+0
+19 2
+1.000000
+1.414213
+130 Case #1:
+0.5 0 0
+0 0.5 0
+0 0 0.5
+Case #2:
+0.3535533905932738 0.3535533905932738 0
+-0.3535533905932738 0.3535533905932738 0
+0 0 0.5
+0
+1
+10 1
+1.732050
+-1
+0
+2
+5 1
+1.5
+-1
+1
+8 src/main
+16 -Xmx256m -Xss64m
+4 Main
+12 main.TaskTam
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2018.04.07
+0 
+1
+32 trunghieu11.utils.io.InputReader
+33 trunghieu11.utils.io.OutputWriter
+0
+0

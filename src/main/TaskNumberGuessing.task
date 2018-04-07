@@ -1,0 +1,21 @@
+18 TaskNumberGuessing
+12 MULTI_NUMBER
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+0
+8 src/main
+6 -Xmx1G
+4 Main
+23 main.TaskNumberGuessing
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2018.04.07
+24 Qualification Round 2018
+1
+32 trunghieu11.utils.io.InputReader
+33 trunghieu11.utils.io.OutputWriter
+0
+0
